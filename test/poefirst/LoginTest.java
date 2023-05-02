@@ -29,6 +29,16 @@ public class LoginTest {
         assertEquals(expResult, result);
         
     }
+    
+    @Test
+    public void testCheckUserNameInvalid() {
+        System.out.println("checkUserName");
+        String username = "kyle!!!!!!!";
+        Login instance = new Login();
+        boolean expResult = false;
+        boolean result = instance.checkUserName(username);
+        assertEquals(expResult, result);
+    }
 
     /**
      * Test of checkPasswordComplexity method, of class Login.
@@ -39,6 +49,17 @@ public class LoginTest {
         String password = "Ch&&sec@ke99!";
         Login instance = new Login();
         boolean expResult = true;
+        boolean result = instance.checkPasswordComplexity(password);
+        assertEquals(expResult, result);
+        
+    }
+    
+    @Test
+    public void testCheckPasswordComplexityInvalid() {
+        System.out.println("checkPasswordComplexity");
+        String password = "password";
+        Login instance = new Login();
+        boolean expResult = false;
         boolean result = instance.checkPasswordComplexity(password);
         assertEquals(expResult, result);
         
@@ -67,9 +88,11 @@ public class LoginTest {
         System.out.println("loginUser");
         String username = "kyl_1";
         String password = "Ch&&sec@ke99!";
+        String loginUsername = "kyl_1";
+        String loginPassword = "Ch&&sec@ke99!";
         Login instance = new Login();
         boolean expResult = true;
-        boolean result = instance.loginUser(username, password);
+        boolean result = instance.loginUser(loginUsername, loginPassword, username, password);
         assertEquals(expResult, result);
         
     }
