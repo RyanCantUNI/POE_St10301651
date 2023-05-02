@@ -1,9 +1,8 @@
 package poefirst;
 
-import java.util.Scanner;
+
 import java.util.regex.*;
-import java.util.*;
-import java.awt.Component;
+
 
 /**
  *
