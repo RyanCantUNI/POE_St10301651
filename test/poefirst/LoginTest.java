@@ -1,26 +1,22 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/UnitTests/JUnit5TestClass.java to edit this template
+ * Click nbfs://nbhost/SystemFileSystem/Templates/UnitTests/JUnit4TestClass.java to edit this template
  */
 package poefirst;
 
+import static org.junit.Assert.assertEquals;
 import org.junit.Test;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
 
 /**
  *
- * @author lab_services_student
+ * @author ADMIN
  */
 public class LoginTest {
     
     public LoginTest() {
     }
 
-    /**
-     * Test of checkUserName method, of class Login.
-     */
-    @Test
+     @Test
     public void testCheckUserName() {
         System.out.println("checkUserName");
         String username = "kyl_1";
@@ -113,5 +109,4 @@ public class LoginTest {
         assertEquals(expResult, result);
         
     }
-    
 }
